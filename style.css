@@ -1,4 +1,5 @@
 
+/* GENERAL DESIGN */
 * {
   box-sizing: border-box;
 }
@@ -15,8 +16,7 @@ body {
   line-height: 1.8;
 }
 
-/* Top banner */
-
+/* TOP BANNER */
 .hero {
   min-height: 440px;
   padding: 80px 20px;
@@ -26,7 +26,7 @@ body {
   text-align: center;
   color: #FFF8EC;
   background:
-    linear-gradient(rgba(35,24,13,.65), rgba(35,24,13,.75)),
+    linear-gradient(rgba(35,24,13,.55), rgba(35,24,13,.70)),
     url("banner.jpg") center/cover no-repeat;
 }
 
@@ -42,6 +42,7 @@ body {
 .hero h1 {
   font-size: clamp(38px, 7vw, 68px);
   margin: 10px 0;
+  line-height: 1.2;
 }
 
 .hero h2 {
@@ -59,34 +60,33 @@ body {
   font-weight: bold;
 }
 
-/* Floating navigation */
-
+/* FLOATING NAVIGATION */
 nav {
   background: #E8D4B4;
-  padding: 15px;
+  padding: 15px 10px;
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   gap: 10px 22px;
   position: sticky;
   top: 0;
   z-index: 99999;
-  box-shadow: 0 3px 10px #0002;
+  box-shadow: 0 2px 8px #0002;
 }
 
 nav a {
   color: #59402A;
   text-decoration: none;
   font-weight: bold;
-  display: inline-block;
+  font-size: 16px;
 }
 
 nav a:hover {
   color: #A05A20;
 }
 
-/* Main content */
-
+/* MAIN CONTENT */
 main {
   max-width: 1100px;
   margin: auto;
@@ -106,6 +106,7 @@ section h2 {
   color: #765333;
   border-bottom: 2px solid #C9A875;
   padding-bottom: 10px;
+  line-height: 1.4;
 }
 
 section h3 {
@@ -113,8 +114,11 @@ section h3 {
   margin-bottom: 5px;
 }
 
-/* Text beside images */
+section p {
+  margin-top: 10px;
+}
 
+/* IMAGES BESIDE TEXT */
 .history-row {
   display: flex;
   align-items: center;
@@ -136,8 +140,7 @@ section h3 {
   border: 2px solid #C9A875;
 }
 
-/* Historical place cards */
-
+/* HISTORICAL PLACE CARDS */
 .place-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -147,6 +150,7 @@ section h3 {
 .place-card {
   background: #F5E6CC;
   padding: 12px;
+  border: 1px solid #C9A875;
   border-radius: 10px;
   text-align: center;
 }
@@ -158,7 +162,15 @@ section h3 {
   border-radius: 8px;
 }
 
-/* Timeline */
+.place-card h3 {
+  margin: 10px 0;
+}
+
+/* TIMELINE */
+#timeline {
+  max-width: 1100px;
+  margin: 30px auto;
+}
 
 .timeline {
   position: relative;
@@ -173,6 +185,7 @@ section h3 {
   margin-bottom: 30px;
   background: #F5E6CC;
   padding: 18px;
+  border: 1px solid #C9A875;
   border-radius: 10px;
 }
 
@@ -198,8 +211,7 @@ section h3 {
   margin-top: 5px;
 }
 
-/* Footer */
-
+/* FOOTER */
 footer {
   background: #765333;
   color: #FFF8EC;
@@ -208,24 +220,43 @@ footer {
   margin-top: 40px;
 }
 
-/* Mobile layout */
+footer h2 {
+  color: #FFF8EC;
+}
 
+/* MOBILE DESIGN */
 @media (max-width: 650px) {
+
   nav {
     position: sticky;
     top: 0;
     z-index: 99999;
-    gap: 8px 15px;
     padding: 12px 5px;
+    gap: 8px 14px;
   }
 
   nav a {
     font-size: 14px;
   }
 
+  .hero {
+    min-height: 350px;
+    padding: 55px 15px;
+  }
+
+  main {
+    padding: 10px;
+  }
+
+  section {
+    padding: 18px;
+    margin: 20px 0;
+  }
+
   .history-row {
     flex-direction: column;
     align-items: stretch;
+    gap: 15px;
   }
 
   .history-row img {
@@ -239,7 +270,15 @@ footer {
     grid-template-columns: 1fr;
   }
 
-  section {
-    padding: 18px;
+  .place-card img {
+    height: 220px;
+  }
+
+  .timeline {
+    margin-left: 10px;
+  }
+
+  .timeline-date {
+    font-size: 16px;
   }
 }
