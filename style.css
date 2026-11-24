@@ -233,3 +233,38 @@ footer {
     background-attachment: scroll;
   }
 }
+.history-row {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin: 25px 0;
+  padding: 20px;
+  background: #FFF8EC;
+  border: 1px solid #C9A875;
+  border-radius: 12px;
+}
+
+.history-row .history-text {
+  flex: 1;
+}
+
+.history-row img {
+  width: 40%;
+  max-width: 350px;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid #C9A875;
+}
+
+@media (max-width: 600px) {
+  .history-row {
+    flex-direction: column;
+  }
+
+  .history-row img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+}
