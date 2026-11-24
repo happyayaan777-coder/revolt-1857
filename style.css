@@ -195,3 +195,41 @@ footer {
     padding: 18px;
   }
 }
+
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 35px auto;
+  padding-left: 35px;
+  border-left: 4px solid #C9A875;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 30px;
+  background: #F5E6CC;
+  padding: 18px;
+  border-radius: 10px;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -46px;
+  top: 22px;
+  width: 18px;
+  height: 18px;
+  background: #765333;
+  border: 3px solid #C9A875;
+  border-radius: 50%;
+}
+
+.timeline-date {
+  color: #8A542A;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.timeline-content h3 {
+  margin-top: 5px;
+  }
