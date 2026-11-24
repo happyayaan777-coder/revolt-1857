@@ -580,6 +580,21 @@ footer {
          alt="Mangal Pandey">
   </div>
   </section>
+  <script>
+let speed = 0.3;
+
+function autoScroll() {
+  window.scrollBy(0, speed);
+
+  if (window.innerHeight + window.scrollY >= document.body.scrollHeight) {
+    window.scrollTo(0, 0);
+  }
+
+  requestAnimationFrame(autoScroll);
+}
+
+autoScroll();
+  </script>
 </body>
 </html>
 
