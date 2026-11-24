@@ -1,0 +1,235 @@
+
+/* GENERAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Georgia, serif;
+  background: #F5E6CC;
+  color: #594633;
+  line-height: 1.7;
+}
+
+/* HEADER */
+header {
+  background: #E8D4B4;
+  text-align: center;
+  padding: 30px 15px;
+  border-bottom: 3px solid #C9A875;
+}
+
+header h1 {
+  color: #765333;
+  font-size: 32px;
+  letter-spacing: 2px;
+}
+
+header p {
+  color: #806548;
+}
+
+/* NAVIGATION */
+nav {
+  background: #FFF8EC;
+  padding: 15px 5px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 3px 8px #76533320;
+}
+
+nav a {
+  color: #765333;
+  text-decoration: none;
+  margin: 10px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #B18445;
+}
+
+/* BACKGROUND */
+main {
+  background:
+    linear-gradient(
+      rgba(245,230,204,.76),
+      rgba(245,230,204,.85)
+    ),
+    url("https://commons.wikimedia.org/wiki/Special:FilePath/Barrackpore%20Park%2C%20a%20heritage%20site%20in%20Barrackpore%20cantonment%2001.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 55px 15px;
+}
+
+.hero h2 {
+  color: #765333;
+  font-size: 34px;
+  margin-bottom: 12px;
+}
+
+.hero p {
+  font-size: 18px;
+}
+
+.hero img {
+  width: 95%;
+  max-width: 1000px;
+  margin-top: 25px;
+  border: 5px solid #C9A875;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px #76533335;
+}
+
+/* SECTIONS */
+section {
+  padding: 45px 8%;
+  background: rgba(255,248,236,.76);
+  margin-bottom: 8px;
+}
+
+section h2 {
+  color: #765333;
+  font-size: 28px;
+  border-bottom: 2px solid #C9A875;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+section p {
+  font-size: 17px;
+}
+
+/* FACT BOX */
+.fact {
+  background: #E8D4B4;
+  padding: 22px;
+  border-left: 5px solid #B18445;
+  border-radius: 10px;
+  margin-top: 25px;
+}
+
+.fact h3 {
+  color: #765333;
+}
+
+/* PLACE CARDS */
+.cards {
+  display: grid;
+  grid-template-columns:
+    repeat(auto-fit, minmax(220px, 1fr));
+  gap: 22px;
+  margin-top: 25px;
+}
+
+.card {
+  min-height: 270px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 18px;
+  border: 3px solid #C9A875;
+  border-radius: 14px;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 5px 15px #76533330;
+  transition: .3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.card h3 {
+  color: #FFF8EC;
+  font-size: 21px;
+  text-shadow: 1px 2px 4px black;
+}
+
+.card p {
+  color: white;
+  background: #493522b9;
+  padding: 9px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+/* HISTORIC PLACE IMAGES */
+.place1 {
+  background-image:
+    linear-gradient(transparent,#493522aa),
+    url("https://commons.wikimedia.org/wiki/Special:FilePath/Mangal%20Pandey%20Park%2C%20Barrackpore.jpg");
+}
+
+.place2 {
+  background-image:
+    linear-gradient(transparent,#493522aa),
+    url("https://commons.wikimedia.org/wiki/Special:FilePath/Barrackpore%20Government%20House%201.jpg");
+}
+
+.place3 {
+  background-image:
+    linear-gradient(transparent,#493522aa),
+    url("https://commons.wikimedia.org/wiki/Special:FilePath/Barrackpore%20Gandhi%20Ghat.jpg");
+}
+
+/* TIMELINE */
+.timeline {
+  border-left: 3px solid #B18445;
+  padding-left: 22px;
+  margin: 25px 0;
+}
+
+.event {
+  margin-bottom: 25px;
+}
+
+.event h3 {
+  color: #936A38;
+}
+
+/* FOOTER */
+footer {
+  background: #E8D4B4;
+  color: #594633;
+  text-align: center;
+  padding: 30px;
+  border-top: 3px solid #C9A875;
+}
+
+/* MOBILE RESPONSIVE */
+@media(max-width:600px) {
+  header h1 {
+    font-size: 24px;
+  }
+
+  .hero h2 {
+    font-size: 26px;
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 5px;
+    font-size: 14px;
+  }
+
+  section {
+    padding: 30px 6%;
+  }
+
+  main {
+    background-attachment: scroll;
+  }
+}

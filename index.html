@@ -1,0 +1,384 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>The Revolt of 1857 | Barrackpore</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Georgia, serif;
+  background: #F5E6CC;
+  color: #594633;
+  line-height: 1.7;
+}
+
+/* HEADER */
+header {
+  background: #E8D4B4;
+  text-align: center;
+  padding: 30px 15px;
+  border-bottom: 3px solid #C9A875;
+}
+
+header h1 {
+  color: #765333;
+  font-size: 32px;
+  letter-spacing: 2px;
+}
+
+header p {
+  color: #806548;
+}
+
+/* NAVIGATION */
+nav {
+  background: #FFF8EC;
+  padding: 15px 5px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 3px 8px #76533320;
+}
+
+nav a {
+  color: #765333;
+  text-decoration: none;
+  margin: 10px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #B18445;
+}
+
+/* BACKGROUND */
+main {
+  background:
+    linear-gradient(
+      rgba(245,230,204,.76),
+      rgba(245,230,204,.85)
+    ),
+    url("https://commons.wikimedia.org/wiki/Special:FilePath/Barrackpore%20Park%2C%20a%20heritage%20site%20in%20Barrackpore%20cantonment%2001.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 55px 15px;
+}
+
+.hero h2 {
+  color: #765333;
+  font-size: 34px;
+  margin-bottom: 12px;
+}
+
+.hero p {
+  font-size: 18px;
+}
+
+.hero img {
+  width: 95%;
+  max-width: 1000px;
+  margin-top: 25px;
+  border: 5px solid #C9A875;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px #76533335;
+}
+
+/* SECTIONS */
+section {
+  padding: 45px 8%;
+  background: rgba(255,248,236,.76);
+  margin-bottom: 8px;
+}
+
+section h2 {
+  color: #765333;
+  font-size: 28px;
+  border-bottom: 2px solid #C9A875;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+section p {
+  font-size: 17px;
+}
+
+/* FACT BOX */
+.fact {
+  background: #E8D4B4;
+  padding: 22px;
+  border-left: 5px solid #B18445;
+  border-radius: 10px;
+  margin-top: 25px;
+}
+
+.fact h3 {
+  color: #765333;
+}
+
+/* PLACE CARDS */
+.cards {
+  display: grid;
+  grid-template-columns:
+    repeat(auto-fit, minmax(220px, 1fr));
+  gap: 22px;
+  margin-top: 25px;
+}
+
+.card {
+  min-height: 270px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 18px;
+  border: 3px solid #C9A875;
+  border-radius: 14px;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 5px 15px #76533330;
+  transition: .3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.card h3 {
+  color: #FFF8EC;
+  font-size: 21px;
+  text-shadow: 1px 2px 4px black;
+}
+
+.card p {
+  color: white;
+  background: #493522b9;
+  padding: 9px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.place1 {
+  background-image:
+  linear-gradient(transparent,#493522aa),
+  url("https://commons.wikimedia.org/wiki/Special:FilePath/Mangal%20Pandey%20Park%2C%20Barrackpore.jpg");
+}
+
+.place2 {
+  background-image:
+  linear-gradient(transparent,#493522aa),
+  url("https://commons.wikimedia.org/wiki/Special:FilePath/Barrackpore%20Government%20House%201.jpg");
+}
+
+.place3 {
+  background-image:
+  linear-gradient(transparent,#493522aa),
+  url("https://commons.wikimedia.org/wiki/Special:FilePath/Barrackpore%20Gandhi%20Ghat.jpg");
+}
+
+/* TIMELINE */
+.timeline {
+  border-left: 3px solid #B18445;
+  padding-left: 22px;
+  margin: 25px 0;
+}
+
+.event {
+  margin-bottom: 25px;
+}
+
+.event h3 {
+  color: #936A38;
+}
+
+/* FOOTER */
+footer {
+  background: #E8D4B4;
+  color: #594633;
+  text-align: center;
+  padding: 30px;
+  border-top: 3px solid #C9A875;
+}
+
+/* MOBILE */
+@media(max-width:600px) {
+  header h1 {
+    font-size: 24px;
+  }
+
+  .hero h2 {
+    font-size: 26px;
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 5px;
+    font-size: 14px;
+  }
+
+  section {
+    padding: 30px 6%;
+  }
+
+  main {
+    background-attachment: scroll;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>THE REVOLT OF 1857</h1>
+  <p>A Journey Through Indian History</p>
+</header>
+
+<nav>
+  <a href="#home">Home</a>
+  <a href="#history">History</a>
+  <a href="#mangal">Mangal Pandey</a>
+  <a href="#places">Places</a>
+  <a href="#timeline">Timeline</a>
+</nav>
+
+<main>
+
+<div class="hero" id="home">
+
+  <h2>The Revolt of 1857 in Barrackpore</h2>
+
+  <p>Discover the history and heritage of Barrackpore.</p>
+
+  <img src="banner.jpg"
+       alt="Historical image of the Revolt of 1857">
+
+</div>
+
+<section id="history">
+
+  <h2>History of the Revolt</h2>
+
+  <p>
+    The Revolt of 1857 was a major uprising against
+    British rule in India. It began among Indian
+    soldiers known as sepoys and spread to several
+    parts of the country.
+  </p>
+
+  <div class="fact">
+    <h3>Did You Know?</h3>
+    <p>
+      Barrackpore is closely connected with the events
+      involving Mangal Pandey in 1857.
+    </p>
+  </div>
+
+</section>
+
+<section id="mangal">
+
+  <h2>Mangal Pandey</h2>
+
+  <p>
+    Mangal Pandey was an Indian soldier in the Bengal
+    Army. His actions at Barrackpore on 29 March 1857
+    became an important event leading up to the Revolt
+    of 1857.
+  </p>
+
+</section>
+
+<section id="places">
+
+  <h2>Historic Places of Barrackpore</h2>
+
+  <p>Explore some well-known heritage locations.</p>
+
+  <div class="cards">
+
+    <div class="card place1">
+      <h3>Mangal Pandey Park</h3>
+      <p>A park associated with the memory of Mangal Pandey.</p>
+    </div>
+
+    <div class="card place2">
+      <h3>Barrackpore Park</h3>
+      <p>A historic park with colonial-era connections.</p>
+    </div>
+
+    <div class="card place3">
+      <h3>Gandhi Ghat</h3>
+      <p>A well-known riverside location in Barrackpore.</p>
+    </div>
+
+  </div>
+
+</section>
+
+<section id="timeline">
+
+  <h2>Important Dates</h2>
+
+  <div class="timeline">
+
+    <div class="event">
+      <h3>29 March 1857</h3>
+      <p>Mangal Pandey's actions at Barrackpore.</p>
+    </div>
+
+    <div class="event">
+      <h3>8 April 1857</h3>
+      <p>Mangal Pandey was executed.</p>
+    </div>
+
+    <div class="event">
+      <h3>May 1857</h3>
+      <p>The uprising spread from Meerut to other regions.</p>
+    </div>
+
+  </div>
+
+</section>
+
+<section>
+
+  <h2>Historical Importance</h2>
+
+  <p>
+    The Revolt of 1857 became an important turning
+    point in Indian history. It inspired later
+    generations in their struggle against British rule.
+  </p>
+
+</section>
+
+</main>
+
+<footer>
+
+  <h3>The Revolt of 1857</h3>
+  <p>Explore • Learn • Remember</p>
+  <p>Historical Educational Project</p>
+
+</footer>
+
+</body>
+</html>
+
