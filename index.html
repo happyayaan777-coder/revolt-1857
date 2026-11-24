@@ -330,6 +330,60 @@ const images = {
 };
   </script>
   
+<script>
+const imageLinks = {
+  "banner.jpg": "The_Revolt_in_India._Illustrated_Times,_1857.jpg",
+  "revolt.jpg": "The_Revolt_in_India._Illustrated_Times,_1857.jpg",
+  "background.jpg": "The_Revolt_in_India._Illustrated_Times,_1857.jpg",
+  "causes.jpg": "The_Revolt_in_India._Illustrated_Times,_1857.jpg",
+  "soldiers.jpg": "The_Revolt_in_India._Illustrated_Times,_1857.jpg",
+  "barrackpore.jpg": "Mangal_Pandey_Park,_Barrackpore.jpg",
+  "mangal.jpg": "Mangal_Pandey.jpg",
+  "meerut.jpg": "1857_mutineers_mosque_meerut2.jpg",
+  "spread.jpg": "Indian_Mutiny_Map_Showing_Position_of_Troops_on_1st_May_1857.jpg",
+  "leaders.jpg": "Bahadur_Shah_Zafar.jpg",
+  "people.jpg": "The_Revolt_in_India._Illustrated_Times,_1857.jpg",
+  "failure.jpg": "Capture_of_Delhi,_1857..jpg",
+  "results.jpg": "Image_victoria_proclamation1858c.JPG",
+  "legacy.jpg": "Mangal_Pandey_Park,_Barrackpore.jpg",
+  "park.jpg": "Mangal_Pandey_Park,_Barrackpore.jpg",
+  "barrackpore-park.jpg": "Mangal_Pandey_Park,_Barrackpore.jpg",
+  "ghat.jpg": "Gandhi_Ghat_in_Barrackpore_02.jpg"
+};
+
+function commonsImage(file) {
+  return "https://commons.wikimedia.org/wiki/Special:FilePath/" + file;
+}
+
+document.querySelectorAll("img").forEach(img => {
+  const name = decodeURIComponent(
+    img.getAttribute("src").split("/").pop()
+  );
+
+  if (imageLinks[name]) {
+    img.src = commonsImage(imageLinks[name]);
+  }
+});
+
+// Set the banner image
+const banner = document.querySelector(".hero");
+if (banner) {
+  banner.style.backgroundImage =
+    "linear-gradient(#0005,#0005),url('" +
+    commonsImage(imageLinks["banner.jpg"]) + "')";
+}
+
+// Image credits
+const credits = document.createElement("p");
+credits.innerHTML =
+  'Image credits: <a href="https://commons.wikimedia.org/wiki/File:Mangal_Pandey.jpg">Mangal Pandey portrait</a>, ' +
+  '<a href="https://commons.wikimedia.org/wiki/File:Mangal_Pandey_Park,_Barrackpore.jpg">Mangal Pandey Park</a>, ' +
+  '<a href="https://commons.wikimedia.org/wiki/File:Gandhi_Ghat_in_Barrackpore_02.jpg">Gandhi Ghat photo by Pinakpani (CC BY-SA 4.0)</a>.';
+credits.style.cssText =
+  "text-align:center;padding:15px;font-size:12px;";
+document.body.appendChild(credits);
+</script>
+  
 </body>
   </html>
   
