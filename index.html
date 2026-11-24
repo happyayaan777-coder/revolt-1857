@@ -565,36 +565,24 @@ footer {
   <div class="history-row">
 
     <div class="history-text">
-      <h3>A Brave Indian Soldier</h3>
-      <p>
-        Mangal Pandey was an Indian soldier
-        in the 34th Bengal Native Infantry.
-        On 29 March 1857, he challenged
-        British officers at Barrackpore.
-        His actions became an important
-        early event in the Revolt of 1857.
-      </p>
-    </div>
-
-    <img src="mangal.jpg"
-         alt="Mangal Pandey">
-  </div>
-  </section>
-  <script>
-let speed = 0.3;
+<script>
+let scrolling = true;
 
 function autoScroll() {
-  window.scrollBy(0, speed);
+  if (scrolling) {
+    window.scrollBy(0, 0.5);
 
-  if (window.innerHeight + window.scrollY >= document.body.scrollHeight) {
-    window.scrollTo(0, 0);
+    if (window.innerHeight + window.scrollY >=
+        document.documentElement.scrollHeight - 2) {
+      window.scrollTo(0, 0);
+    }
   }
 
-  requestAnimationFrame(autoScroll);
+  setTimeout(autoScroll, 30);
 }
 
 autoScroll();
-  </script>
+</script>
 </body>
 </html>
 
