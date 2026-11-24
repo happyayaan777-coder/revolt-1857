@@ -1,235 +1,197 @@
 
-/* GENERAL */
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
+}
+
+html {
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: Georgia, serif;
+  margin: 0;
   background: #F5E6CC;
   color: #594633;
-  line-height: 1.7;
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.8;
 }
 
-/* HEADER */
-header {
-  background: #E8D4B4;
+/* Top banner */
+
+.hero {
+  min-height: 440px;
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  padding: 30px 15px;
-  border-bottom: 3px solid #C9A875;
+  color: #FFF8EC;
+  background:
+    linear-gradient(rgba(35,24,13,.65), rgba(35,24,13,.75)),
+    url("banner.jpg") center/cover no-repeat;
 }
 
-header h1 {
-  color: #765333;
-  font-size: 32px;
-  letter-spacing: 2px;
+.hero-content {
+  max-width: 850px;
 }
 
-header p {
-  color: #806548;
+.eyebrow {
+  letter-spacing: 4px;
+  font-size: 13px;
 }
 
-/* NAVIGATION */
+.hero h1 {
+  font-size: clamp(38px, 7vw, 68px);
+  margin: 10px 0;
+}
+
+.hero h2 {
+  font-size: clamp(20px, 4vw, 30px);
+}
+
+.explore {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 25px;
+  background: #C9A875;
+  color: #332416;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+/* Navigation */
+
 nav {
-  background: #FFF8EC;
-  padding: 15px 5px;
-  text-align: center;
+  background: #E8D4B4;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px 22px;
   position: sticky;
   top: 0;
   z-index: 10;
-  box-shadow: 0 3px 8px #76533320;
+  box-shadow: 0 2px 8px #0002;
 }
 
 nav a {
-  color: #765333;
+  color: #59402A;
   text-decoration: none;
-  margin: 10px;
   font-weight: bold;
 }
 
 nav a:hover {
-  color: #B18445;
+  color: #A05A20;
 }
 
-/* BACKGROUND */
+/* Main content */
+
 main {
-  background:
-    linear-gradient(
-      rgba(245,230,204,.76),
-      rgba(245,230,204,.85)
-    ),
-    url("https://commons.wikimedia.org/wiki/Special:FilePath/Barrackpore%20Park%2C%20a%20heritage%20site%20in%20Barrackpore%20cantonment%2001.jpg");
-
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
 }
 
-/* HERO */
-.hero {
-  text-align: center;
-  padding: 55px 15px;
-}
-
-.hero h2 {
-  color: #765333;
-  font-size: 34px;
-  margin-bottom: 12px;
-}
-
-.hero p {
-  font-size: 18px;
-}
-
-.hero img {
-  width: 95%;
-  max-width: 1000px;
-  margin-top: 25px;
-  border: 5px solid #C9A875;
-  border-radius: 14px;
-  box-shadow: 0 6px 20px #76533335;
-}
-
-/* SECTIONS */
 section {
-  padding: 45px 8%;
-  background: rgba(255,248,236,.76);
-  margin-bottom: 8px;
+  background: #FFF8EC;
+  border: 1px solid #C9A875;
+  border-radius: 12px;
+  padding: 25px;
+  margin: 30px 0;
+  scroll-margin-top: 85px;
 }
 
 section h2 {
   color: #765333;
-  font-size: 28px;
   border-bottom: 2px solid #C9A875;
   padding-bottom: 10px;
-  margin-bottom: 20px;
 }
 
-section p {
-  font-size: 17px;
-}
-
-/* FACT BOX */
-.fact {
-  background: #E8D4B4;
-  padding: 22px;
-  border-left: 5px solid #B18445;
-  border-radius: 10px;
-  margin-top: 25px;
-}
-
-.fact h3 {
+section h3 {
   color: #765333;
+  margin-bottom: 5px;
 }
 
-/* PLACE CARDS */
-.cards {
-  display: grid;
-  grid-template-columns:
-    repeat(auto-fit, minmax(220px, 1fr));
-  gap: 22px;
-  margin-top: 25px;
-}
+/* Text beside images */
 
-.card {
-  min-height: 270px;
+.history-row {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 18px;
-  border: 3px solid #C9A875;
-  border-radius: 14px;
-  background-size: cover;
-  background-position: center;
-  box-shadow: 0 5px 15px #76533330;
-  transition: .3s;
-}
-
-.card:hover {
-  transform: translateY(-6px);
-}
-
-.card h3 {
-  color: #FFF8EC;
-  font-size: 21px;
-  text-shadow: 1px 2px 4px black;
-}
-
-.card p {
-  color: white;
-  background: #493522b9;
-  padding: 9px;
-  border-radius: 6px;
-  font-size: 14px;
-}
-
-/* HISTORIC PLACE IMAGES */
-.place1 {
-  background-image:
-    linear-gradient(transparent,#493522aa),
-    url("https://commons.wikimedia.org/wiki/Special:FilePath/Mangal%20Pandey%20Park%2C%20Barrackpore.jpg");
-}
-
-.place2 {
-  background-image:
-    linear-gradient(transparent,#493522aa),
-    url("https://commons.wikimedia.org/wiki/Special:FilePath/Barrackpore%20Government%20House%201.jpg");
-}
-
-.place3 {
-  background-image:
-    linear-gradient(transparent,#493522aa),
-    url("https://commons.wikimedia.org/wiki/Special:FilePath/Barrackpore%20Gandhi%20Ghat.jpg");
-}
-
-/* TIMELINE */
-.timeline {
-  border-left: 3px solid #B18445;
-  padding-left: 22px;
+  align-items: center;
+  gap: 25px;
   margin: 25px 0;
 }
 
-.event {
-  margin-bottom: 25px;
+.history-text {
+  flex: 1;
+  min-width: 0;
 }
 
-.event h3 {
-  color: #936A38;
+.history-row img {
+  width: 40%;
+  max-width: 350px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid #C9A875;
 }
 
-/* FOOTER */
-footer {
-  background: #E8D4B4;
-  color: #594633;
+/* Historical place cards */
+
+.place-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.place-card {
+  background: #F5E6CC;
+  padding: 12px;
+  border-radius: 10px;
   text-align: center;
-  padding: 30px;
-  border-top: 3px solid #C9A875;
 }
 
-/* MOBILE RESPONSIVE */
-@media(max-width:600px) {
-  header h1 {
-    font-size: 24px;
+.place-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Footer */
+
+footer {
+  background: #765333;
+  color: #FFF8EC;
+  text-align: center;
+  padding: 35px 15px;
+  margin-top: 40px;
+}
+
+/* Mobile layout */
+
+@media (max-width: 650px) {
+  nav {
+    position: static;
+    gap: 8px 15px;
   }
 
-  .hero h2 {
-    font-size: 26px;
+  .history-row {
+    flex-direction: column;
+    align-items: stretch;
   }
 
-  nav a {
-    display: inline-block;
-    margin: 5px;
-    font-size: 14px;
+  .history-row img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: 300px;
+  }
+
+  .place-grid {
+    grid-template-columns: 1fr;
   }
 
   section {
-    padding: 30px 6%;
-  }
-
-  main {
-    background-attachment: scroll;
+    padding: 18px;
   }
 }
